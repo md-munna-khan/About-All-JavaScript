@@ -104,38 +104,3 @@ console.log(isLeapYear(2020));
 console.log(isLeapYear(1900)); 
 console.log(isLeapYear(2000)); 
 
-// 8. Task: Unique Values
-
-// -Create an array of numbers with some duplicate values. Write a function to filter out the duplicate values and return a new array with only unique numbers. Print the result.
-
-const nums = [1,2,2,3,4,4,5,6,6,7,8,8,9,10];
-const uniqueNums = [...new Set(nums)];
-console.log(uniqueNums)
-// 09.Task: Advanced Sorting
-
-// -Create an array of objects representing students with 'name' and 'grades' properties. Write a function to sort the students by average grade in descending order.
-const students = [
-    {name:"jabber",grades:[90,80,85]},
-    {name:"hadi",grades:[70,75,80]},
-    {name:"omor",grades:[95,85,90]},
-]
-students.sort((a,b)=>{
-    const avgA = a.grades.reduce((acc,cur)=> acc + cur,0) / a.grades.length;
-    const avgB = b.grades.reduce((acc,cur)=> acc + cur,0) / b.grades.length;
-    return avgB - avgA;
-})
-console.log(students)
-
-// 10. Task: Functional Programming - Reduce
-
-// -Write a function that uses the reduce function to calculate the total value of an array of objects with a 'quantity' and 'price' property.interview
-
-
-const items = [
-    {quantity:2,price:10},
-    {quantity:3,price:15},  
-    {quantity:1,price:20},
-]
-const totalValue = items
-.reduce((acc,cur)=> acc + (cur.quantity * cur.price),0)
-console.log(totalValue)
