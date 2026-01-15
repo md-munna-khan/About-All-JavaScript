@@ -134,4 +134,63 @@ Game development
 ![alt text](image-9.png)
 
 
-## ======================= Enough Lets Dive Into Code =============================
+## ⭕⭕⭕ CODE STARTED⭕⭕⭕
+
+- first create a folder and file
+- and must add extension for his language for example .js
+
+### 🔵1:05:38- Declare JavaScript VARIABLE
+```js
+let a = 398
+let b = 239
+let c = a + b
+console.log(a + " + " + b + " = "+ c)
+console.log(a + " + " + b + " = "+ (a-b))
+console.log(a + " + " + b + " = "+ (a * b))
+console.log(a + " + " + b + " = "+ (a / b))
+```
+### 🔵1:19:23- What is Data Type?
+- string data 
+- number data
+- boolean data 
+
+### 🔵1:24:06 -Data type in JavaScript
+-  primitive data its mean who store value not reference
+```js
+let a= 32;
+let b = 3.4;
+let c = "munna";
+let d = true;
+let e 
+let f = null;
+
+console.log(typeof a)
+console.log(typeof b)
+console.log(typeof c)
+console.log(typeof d)
+console.log(typeof e)
+console.log(typeof f)
+```
+
+### 🔵1:28:24-JavaScript Naming Convension
+
+- create variable or function use first word small later then if need next word use capital letter 
+this is 
+```js
+// camelcase
+let myName = "munna",
+// snackCase
+let my_Name = "munna",
+// PascalCase
+let my-Name = "munna",
+```
+- dont use reserve keyword
+![alt text](image-10.png)
+
+ # ⭕⭕⭕ OPERATOR⭕⭕⭕
+
+### 🔵1:32:57- OPERATOR
+
+### 🔵1:36:57-Type of operators
+### 🔵2:01:54- Arithmetic and Assignment Operators
+### 🔵2:26:02 - Operator Importance
