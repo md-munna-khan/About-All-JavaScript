@@ -187,10 +187,38 @@ let my-Name = "munna",
 - dont use reserve keyword
 ![alt text](image-10.png)
 
- # ⭕⭕⭕ OPERATOR⭕⭕⭕
+ # ⭕⭕⭕ OPERATOR ⭕⭕⭕ 
 
-### 🔵1:32:57- OPERATOR
+### 🔵1:32:57- OPERATOR operator mean driver  or guider
+![alt text](image-11.png)
 
 ### 🔵1:36:57-Type of operators
+![alt text](image-12.png)
+
 ### 🔵2:01:54- Arithmetic and Assignment Operators
-### 🔵2:26:02 - Operator Importance
+`1`  Arithmetic Operator
+  - 1 add (+)
+  - 2 subtraction (-)
+  - 3 Multiplication (*)
+  - 4 Division (/)
+  - Modulus (%)
+  ![alt text](image-13.png)
+
+  `2` Assignment Operator
+![alt text](image-14.png)
+![alt text](image-15.png)
+
+ `3` Relational Operator
+ > greater than its mean big
+ < less than its mean small 
+![alt text](image-16.png)
+
+ `4` logical Operator
+![ ](image-17.png)
+
+### 🔵2:26:02 - Operator Importance  Precedence
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+- assignment operator
+![alt text](image-20.png)
