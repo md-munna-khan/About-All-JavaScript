@@ -1,188 +1,140 @@
-# JavaScript Full doc 
+# ⭕⭕⭕OBJECT⭕⭕⭕
+## 🔵5:25:13-  What is Object?
+-  object is a key value pair to store data
+- for example if you define yourself  you tell your name ,age ,study,father  name ,mother name etc;
+so if you use variable or object this is not perfect solution because if define by variable need many variable and if you define by variable when you find data you need memorize data index this is problem so that's why we use object
 
-## what is Programming?
-- programming is a manual or we  language specification
-if we call loop then he run for loop  and same as if call  then he run if condition its all set who make this language
-
-- many language declaration style many type but computer just understand only (0 and 1)
-- but  all language main target is understanding the computer
-![alt text](image.png)
-
-## how Does computer understanding programming language?
-- computer only understand binary data (010001011101)
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-## What is compiler and why?
-
-compiler means as a translator and  every  language have own compiler who code convert to machine codes and understood the language
-0101010000010111000101010010
-![alt text](image-3.png)
-
-![alt text](image-4.png)
-
-![alt text](image-5.png)
-
-## what is programming environment?
-![alt text](image-6.png)
-
-## History of JavaScript
- 1995 – Birth of JavaScript
-
-JavaScript was created by Brendan Eich while he was working at Netscape.
-
-The first version was developed in just 10 days.
-
-Initially, it was named Mocha, then LiveScript, and finally JavaScript.
-
-Despite the name, JavaScript is not related to Java. The name was mainly used for marketing purposes.
-
-### Why JavaScript Was Created
-
-In the early days, websites were:
-
-Static (no interaction)
-
-Only displayed text and images
-
-JavaScript was introduced to:
-
-Add interactivity to web pages
-
-Validate forms in the browser
-
-Respond to user actions like clicks and input
-
-### 1997 – Standardization (ECMAScript)
-
-JavaScript was standardized under the name ECMAScript.
-
-This ensured JavaScript would behave consistently across different browsers.
-
-### 2000s – Growth Era
-
-JavaScript became essential for web development.
-
-Libraries like jQuery simplified complex tasks.
-
-Websites became more dynamic and user-friendly.
-
-### 2009 – Server-Side JavaScript
-
-Node.js was introduced, allowing JavaScript to run outside the browser.
-
-This made JavaScript a full-stack language.
-
-### 2015 – ES6 Revolution
-
-ES6 (ECMAScript 2015) introduced major features like:
-
-let and const
-
-Arrow functions
-
-Classes
-
-Modules
-
-This modernized JavaScript significantly.
-
-###  Present Day
-
-JavaScript is one of the most popular programming languages in the world.
-
-Used in:
-
-Frontend (React, Vue, Angular)
-
-Backend (Node.js)
-
-Mobile apps
-
-Desktop apps
-
-Game development
-
-## Every thing is data
-
-- for example your fb account 
-- your image is image data
-- you name is text data  as like all is data 
-
-## why do we store data?
-
-- in the childhood we taking the note? but why we taking note because in the exam time we learn easily important trophic from note 
-
-### we store data Because
-- we want to remember it
-- we want to find it
-- we want to reuse
-- we want to process someway
-- make data safe
-![alt text](image-7.png)
-
-## how to store Data?
-![alt text](image-8.png)
-- in programming language we use variable to store temporary data 
-
-## how to use variable in programming language 
-- every variable has ------------------------
-- name
-- value
-- optional data type 
-![alt text](image-9.png)
-
-
-## ⭕⭕⭕ CODE STARTED⭕⭕⭕
-
-- first create a folder and file
-- and must add extension for his language for example .js
-
-### 🔵1:05:38- Declare JavaScript VARIABLE
 ```js
-let a = 398
-let b = 239
-let c = a + b
-console.log(a + " + " + b + " = "+ c)
-console.log(a + " + " + b + " = "+ (a-b))
-console.log(a + " + " + b + " = "+ (a * b))
-console.log(a + " + " + b + " = "+ (a / b))
+// object is a key value pair to store data
+❌ const fname="munna";
+❌ const lname="mia";
+❌ const email = "munna@gmail.com";
+
+❌ const person = ["HM","munna",12]
 ```
-### 🔵1:19:23- What is Data Type?
-- string data 
-- number data
-- boolean data 
-
-### 🔵1:24:06 -Data type in JavaScript
--  primitive data its mean who store value not reference
+## 🔵5:30:37-  How to define Object?
 ```js
-let a= 32;
-let b = 3.4;
-let c = "munna";
-let d = true;
-let e 
-let f = null;
+// how to define object?
+// const o ={} // object
 
-console.log(typeof a)
-console.log(typeof b)
-console.log(typeof c)
-console.log(typeof d)
-console.log(typeof e)
-console.log(typeof f)
+// object shape 1
+const person1={}
+person1.name="munna";
+person1.age= 23;
+person1.emai= "munna@gamil.com";
+console.log(person1) 
+// { name: 'munna', age: 23, emai: 'munna@gamil.com' }
+
+// object shape 2
+const person2={
+    name :"munna",
+    age: 34,
+    address:"mirpur"
+}
+console.log(person2)
+console.log(person2.age)
+// { name: 'munna', age: 34, address: 'mirpur' }
 ```
 
-### 🔵1:28:24-JavaScript Naming Convension
-
-- create variable or function use first word small later then if need next word use capital letter 
-this is 
+## 🔵5:35:36-  Add and Remove element
 ```js
-// camelcase
-let myName = "munna",
-// snackCase
-let my_Name = "munna",
-// PascalCase
-let my-Name = "munna",
+// object shape 2
+const person2={
+    name :"munna",
+    age: 34,
+    address:"mirpur"
+}
+// ✅add id element in the object
+person2.id ='213'
+// { name: 'munna', age: 34, address: 'mirpur', id: '213' }
+
+//❌ delete element  age is deleted
+delete person2.age;
+// { name: 'munna', address: 'mirpur', id: '213' }
+
+console.log(person2)
+
+
+ //✅ dot notation add and delete property
+//  person2.id ='213'
+
+//✅ array notation
+const key= "name"
+console.log(person2 ["address"]) // mirpur
+console.log(person2 [key]) //munna
 ```
-- dont use reserve keyword
-![alt text](image-10.png)
+
+## 🔵5:40:23-  Array of objects
+```js
+// // when we use array of object?
+// // when we need many information in one object then we use array of object
+
+
+// const p1={
+//     name :"munna",
+//     age:12
+// }
+// const p2={
+//     name :"sollu",
+//     age:156
+// }
+// const p3={
+//     name :"masud",
+//     age:23
+// }
+// const p4={
+//     name :"sazid",
+//     age:45
+// }
+// const people = [p1,p2,p3,p4];
+// console.log(people[0].name) // munna
+// console.log(people[1].age)  // 156
+// output
+// [
+//   { name: 'munna', age: 12 },
+//   { name: 'sollu', age: 156 },
+//   { name: 'masud', age: 23 },
+//   { name: 'sazid', age: 45 }
+// ]
+// when we use array of object?
+// when we need many information in one object then we use array of object
+
+// ✅ better approach don't need many times  variable call
+const people = [
+    
+{
+    name :"munna",
+    age:12
+},
+{
+    name :"sollu",
+    age:156
+},
+{
+    name :"masud",
+    age:23
+},
+{
+    name :"sazid",
+    age:45,
+   ✅ friends:['munna',"rofik","masud"]
+}
+];
+
+console.log(people[0].name) // munna
+console.log(people[1].age)  // 156
+// [
+//   { name: 'munna', age: 12 },
+//   { name: 'sollu', age: 156 },
+//   { name: 'masud', age: 23 },
+//   { name: 'sazid', age: 45 }
+// ]
+for (let p of people){
+    console.log(`${p.name} (${p.age})`)
+}
+// output
+// munna (12)
+// sollu (156)
+// masud (23)
+// sazid (45)
+```
