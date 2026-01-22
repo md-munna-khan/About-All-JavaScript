@@ -1,254 +1,210 @@
-# ⭕⭕⭕FUNCTION⭕⭕⭕
-## 🔵5:46:39- What is function?
+# ⭕⭕⭕DOM⭕⭕⭕
+## 🔵6:39:29- What is DOM?
+- Document object Model
+The DOM is a structured representation of an HTML (or XML) document as a tree of objects. It allows JavaScript to access, modify, add, or remove elements, attributes, and content dynamically on a webpage.
+
+Key points:
+
+Tree Structure
+
+The HTML page is represented as a tree of nodes:
+
+document → root
+
+html → element nodes
+
+head, body → children
+
+p, div, span → leaf nodes
+
+Objects you can access
+
+Elements (document.getElementById())
+
+Attributes (element.setAttribute())
+
+Text content (element.textContent)
+
+Styles (element.style.color = "red")
+
+Dynamic manipulation
+
+Add/remove elements: appendChild, removeChild
+
+Change content: innerHTML, textContent
+
+React to events: onclick, addEventListener
+<p id="demo">Hello</p>
+
+<script>
+  const p = document.getElementById("demo")
+  p.textContent = "Hello World!" // changes text dynamically
+  p.style.color = "blue"         // changes color dynamically
+</script>
+
+
+## 🔵6:45:41- What do you need to learn?
+-1  dom selector 
+What you’ll learn:
+
+How to access HTML elements using JavaScript
+
+Different ways to select elements
 ```js
-// what is function 
-const arr1 =[1,2,34,56,65,76,54]
-const arr2 =[13,2,323,46,65,76,54]
+const heading = document.getElementById('title');
+console.log(heading.textContent);
 
-// let max= arr1[0]
-// for(let v of arr1){
-//     if(v > max){
-//         max = v
-//     }
-// }
-// console.log(max)
-// rapatative work
-// let max1= arr2[0]
-// for(let v of arr2){
-//     if(v > max1){
-//         max1 = v
-//     }
-// }
-// console.log(max1)
+```
+- dom manipulation
+What you’ll learn:
 
-// A function is a block of code that does a specific task.
-// You write the solution once and call it many times whenever needed.
+How to change content, style, classes, and attributes of elements using JS
+```js
+const p = document.querySelector('p');
+p.textContent = "Hello World";   // change text
+p.style.color = 'blue';          // change style
+p.classList.add('active');       // add class
+p.setAttribute('id','newId');    // change attribute
 
-function findMax (arr){
- let max= arr[0]
-for(let v of arr){
-    if(v > max){
-        max = v
-    }
-}
-return max
-}
-console.log(findMax(arr1))
-console.log(findMax(arr2))
 ```
 
-## 🔵5:53:19- How to define function?
-```js
-// function define 
-//() this parent theses is a parameter and we can pass the value
-function myFunction(){
-    console.log("My First Function")
-    const a = 20;
-    const b= 30
-    console.log("sum "+ (a+ b))
-}
+- dom creation
+What you’ll learn:
 
-// we can call many times
-myFunction()// function call 
-myFunction()// function call 
-myFunction()// function call 
-myFunction()// function call 
+How to create new HTML elements and add them to the DOM
+```js
+const div = document.createElement('div');  // create element
+div.textContent = "New Div";                // set text
+document.body.appendChild(div);             // attach to DOM
+
 ```
-## 🔵5:57:55- Function arguments
+- dom ajax
+What you’ll learn:
 
+How to fetch data from a server without page reload
+
+How to update the DOM dynamically with fetched data
 ```js
-function sum (a,b ✅ argument ){
-const result = a+b;
-console.log(result)
-}
-
-sum(20,40 ✅ argument) // actual value  argument
-sum(33,49)
-sum(323,32)
-sum(33,22)
-```
-## 🔵6:02:13- Return Statement
-```js
-// return is used inside a function to send a value back to where the function was called and stop the function execution.
-function sum (a,b ){
-const result = a+b;
-return result
-}
-// return data we can a store in a variable
-const r1= sum(20,40) 
-
-const r2=sum(33,49)
-const r3=sum(323,32)
-const r4=sum(33,22)
-console.log(r1,r2,r3,r4)
-```
-## 🔵6:08:14- Arrow function
-```js
-// ✅ this function name is function expression
-// function sum (a,b){
-//     a+b
-//  return a+b
-// }
-// console.log(sum(5,7))
-
-// const sum = function (a, b) {
-//   return a + b
-// }
-
-// console.log(sum(4, 6))
-
-// arrow function 
-
-// const sum = (a,b)=>{
-//     console.log( a+b)
-// return a+b
-
-// }
-// sum(4,65)
-
-// we can call one line when our code is short
-const sum1 = (a,b)=>  a+b;
-console.log(sum1(6,8))
-const max = (a,b)=> Math.max(a,b)
-console.log(max(5,6))
-```
-## 🔵6:13:00- Function is first class citizen 
-```js
-// function is first of citizen
-
-function sayHello(name){
-    console.log("hello", name)
-}
-
-const sayHi = sayHello
-
-// console.log(sayHi)
-// [Function: sayHello]
-
-sayHi("munna")
-// hello munna
-// in there sayHello value receive sayHi and we call sayHi variable and pass argument 
-// in there we pass function in another function
-```
-## 🔵6:16:42- Inner Function
-```js
-// inner function
-// in one function call another function
-function outer() {
-  function inner() {
-    console.log("I am inner function")
-  }
-
-  inner()
-}
-
-outer()
-
-
-function displayTable(n){
-    const isOdd=(n)=> n%2 !==0
-    const isEven=(n)=> n%2 ===0
-for (let i=0;i <n;i++){
-    if(isOdd){
-        console.log('table Row [#fff]', i+1)
-    }else if(isEven){
- console.log('table Row [#000]', i+1)
-    }
-}}
-displayTable(10)
-// table Row [#fff] 1
-// table Row [#fff] 2
-// table Row [#fff] 3
-// table Row [#fff] 4
-// table Row [#fff] 5
-// table Row [#fff] 6
-// table Row [#fff] 7
-// table Row [#fff] 8
-// table Row [#fff] 9
-// table Row [#fff] 10
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(data => {
+      const p = document.createElement('p');
+      p.textContent = data.title;
+      document.body.appendChild(p);
+  });
 ```
 
-## 🔵6:21:35- Callback function
+
+## 🔵6:49:12- What is selector?
+- js added 
 ```js
-// const arr = [1,2,4]
-
-// let sum = 0
-// arr.forEach(element => {
-//     // console.log( "value",element)
-//     sum +=element
-// });
-// console.log(sum)
-
-function toUpper(str,callback){
-const upper = str.toUpperCase();
-callback(upper)
-}
-
-toUpper ('stack learner',(abc)=>{
-    console.log(abc)
-})
-// A callback function is a function you pass to another function, so that function can run it later when it decides.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+    ✅<script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <h1 id="title">Understand Dom Selector</h1>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, facilis dolorem architecto nihil adipisci exercitationem debitis vel at amet maxime ipsum eaque. Exercitationem molestiae doloremque, placeat maiores recusandae atque reiciendis.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, facilis dolorem architecto nihil adipisci exercitationem debitis vel at amet maxime ipsum eaque. Exercitationem molestiae doloremque, placeat maiores recusandae atque reiciendis.</p>
+    </div>
+    
+</body>
+</html>
 ```
-## 🔵6:28:05- Return function
+- our full html file under the document file 
+![alt text](image-28.png)
+![alt text](image-29.png)
+ most of the case we use id selector for js
+
+ ```js
+ const title = document.getElementById("title");
+title.innerHTML = " My custom title changed by id "
+console.log(title)
+```
+## 🔵6:57:01- Get element by class
+- we can cahnge the color by loop 
+![alt text](image-30.png)
 ```js
-// higher order function
-
-function returnIsEven(){
-    const isEven = (n)=> n%2 === 0;
-    return isEven
+const paragraphs = document.getElementsByClassName("para")
+for(let v of paragraphs){
+    v.style.color ="red"
 }
-
-const isEven = returnIsEven()
-console.log(isEven(5)) // output false
-
-// shortcut way
-console.log(returnIsEven()(10)) // output true
-
-// call a function to another function
+console.log(paragraphs)
 ```
-## 🔵6:31:27- Function scopes
+## 🔵7:02:48- Query selector
 ```js
-let globalVariable ="Global Value"; // global variable can access any where in code
-function outerFunction(){
-let scopedVariable = "scoped value";
-function innerFunction(){
-    let innerVariable = "inner value"
-    console.log(scopedVariable)
-}
-// to parent variable can access child
-innerFunction()
-// ❌ console.log(innerFunction) // every variable own are
+// for id 
+const title = document.querySelector("#title")
+console.log(title)
+// for all css selector
+const paragraphs = document.querySelectorAll('.para')
+console.log(paragraphs)
+```
+## 🔵7:06:38- Understand DOM element
+- Dom manupulation
+
+## 🔵7:10:20- Understand onload function
+- first load then show data
+```js
+window.onload = function(){
+main()
 }
 
-outerFunction()
+function main(){
+    alert("hello munna")
+}
 ```
-## 🔵6:35:08- Understand closure
+
+## 🔵7:14:12- Handle click event
+```js
+window.onload = function(){
+main()
+}
+
+function main(){
+  const btn = document.getElementById('click-me')
+//   console.log(btn)
+  let times=0
+//   btn.onclick = function(){
+//     alert(" clicked" + times++)
+//   }
+// function (e) this is add event listener
+btn.addEventListener('click',function(e){
+    console.log(e);
+       alert(" clicked " + times++)
+});
+}
+```
+## 🔵7:21:05- Change content on click
 
 ```js
-// closure
-
-function multiplier (t){
-    return function(n){
-        return n*t
-    }
+window.onload = function(){
+main()
 }
 
-const multiplyBy5 = multiplier(5) // closure
-
-console.log(multiplyBy5(20))
-console.log(multiplyBy5(40))
-console.log(multiplyBy5(2))
-
-// What is multiplyBy5 really?
-
-// multiplyBy5 is not a number, it is a function:
-
-// multiplyBy5 = function(n) {
-//     return n * 5
-// }
-
-
-// It stores the inner function itself, with t = 5 remembered.
-
-// So you can now call it multiple times with different n values.
+function main(){
+  const btn = document.getElementById('click-me')
+const title = document.getElementById('title')
+let currentTitle= title.textContent;
+let nextTitle =  'change dom element '
+btn.addEventListener('click',function(e){
+title.innerText = nextTitle;
+const temp = currentTitle
+currentTitle = nextTitle
+nextTitle = temp
+});
+}
 ```
+## 🔵7:29:52- Change class on click
+
+## 🔵7:36:36- Handle input events
+## 🔵7:43:26- Create and Append DOM element
+## 🔵7:50:14- Create DOM attribute
+## 🔵7:52:42- Update innerHTML and innerTEXT
+## 🔵7:56:27- Handle input events
